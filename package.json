@@ -1,0 +1,14 @@
+{
+  "name": "workflow",
+  "version": "1.0.0",
+  "main": "index.html",
+  "repository": "git@github.com:damonbauer/workflow.git",
+  "author": "Damon Bauer <damonbauer@users.noreply.github.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^11.2.0"
+  },
+  "scripts": {
+    "serve": "npx serve"
+  }
+}
