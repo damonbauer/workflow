@@ -14,33 +14,74 @@
 </head>
 <body class="light">
   <div>
-    workflow
+    work
+
+    <notes>
+      INTRO:
+      Hi, I'm Damon Bauer. I'm a developer on the Gazelle Debit Card team. I've been at Ramsey Solutions for 5 1/2 years. I started working on daveramsey.com, then moved to EveryDollar where I worked on the browser app for about 3 years.
+
+      This is a talk about how I do work. Most of these ideas are not mine, but I've learned them over my time here.
+
+      There's a good chance you've heard of, or even practice, a lot of what I'm going to talk about. My hope is that everyone can find at least _something_ to try and improve our code, processes and end products.
+
+      One thing you'll probably notice as I speak is that this talk has almost nothing to do with the actual code you write. This talk has much more to do with how you communicate, think about problems, and find solutions that serve your team, the business, and ultimately the users of your code.
+
+      ******** FIND A GOOD EXAMPLE OF A FEATURE THAT WE BROKE DOWN ********
+    </notes>
   </div>
 
   <div>
     part 1: design
+
+    <notes>
+      How do we break this work down? 
+    </notes>
   </div>
 
   <div>
-    ruthlessly cut scope
+    <em>ruthlessly</em> cut scope
     <div class="part-marker">part 1: design</div>
 
     <notes>
-      * ask yourself this question: what can your team, including design & product, agree on that is the smallest piece of work?
-      * Once you have that, ensure these 3 things are true with that smallest piece of work.
+      * Alongside designers and product managers, ask these questions:
+        * what can we agree on that is the smallest piece of work?
+        * what can we _not_ ship?
+        * what can we get away with _not_ doing?
+      * Designers push the boundaries of our UI's. They challenge our assumptions, they question why something is technically not possible. This is a good thing! This is your chance to challege them! It's not a fight or a power struggle; it's an exercise in give and take and learning what's imperative to keep vs. what's a "nice to have".
+      * Once you've cut scope, ensure these 3 things are true with that smallest piece of work.
     </notes>
   </div>
 
   <div>
     provide <em>some</em> user value
     <div class="part-marker">part 1: design: ruthlessly cut scope</div>
+
+    <notes>
+      The most important thing to ensure is that this new piece of work still provides user value.
+
+      If the user can still perform the task they need, you're on the right track. Now it becomes a discussion with designers to ensure what will be delivered is an acceptable first iteration.
+    </notes>
+  </div>
+
+  <div>
+    <img src="images/cut-scope-mockup.png">
+    <img src="images/cut-scope-v1.png">
+    <div class="part-marker">part 1: design: ruthlessly cut scope</div>
+
+    <notes>
+      Here are 2 screenshots from a "transfer funds" feature we built. The goal was to enable a user to transfer funds from a connected bank account into their Gazelle account. On the left was the mockup, on the right was what we delivered as a 1st iteration.
+
+      Things we cut included: bank icons, custom select box, account balances & numbers, to/from toggle, schedule transfer, withdraw & deposit estimates.
+
+      This was around 4 months ago... and we're still using what's on the right. We'll eventually get to improving it, but we're solving more important problems right now.
+    </notes>
   </div>
 
   <div>
     don't box yourself in
     <div class="part-marker">part 1: design: ruthlessly cut scope</div>
     <notes>
-      * a small piece of work should help build a foundation to help you iterate quickly
+      The small piece of work should help build a foundation to help you iterate quickly.
     </notes>
   </div>
 
@@ -196,6 +237,18 @@
   <div>
     tickets as user value
     
+    <div class="part-marker">part 2: always be shipping: how</div>
+
+    <notes>
+      Tickets should be written so as they move across the board, user value is being delivered. On Gazelle, we make a parent ticket that describes the feature that has all the acceptance criteria, testing notes & user stories. Then, we make sub tasks that we'll use to track our work. So the parent ticket acts almost as an "epic".
+
+      It's common for a ticket to have 10-15, sometimes 20, subtasks if it's a brand new feature.
+    </notes>
+  </div>
+
+  <div class="layout" style="grid-template-columns: 50% 50%;">
+    <img src="images/subtasks-1.png">
+    <img src="images/subtasks-2.png">
     <div class="part-marker">part 2: always be shipping: how</div>
   </div>
 

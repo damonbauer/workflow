@@ -59,7 +59,7 @@ addEventListener("load", () => {
       slideDiv = sc.firstChild;
     if (sc._notes.length) {
       console.group(n);
-      for (let note of sc._notes) console.log("%c%s", "padding:5px;font-family:serif;font-size:18px;line-height:150%;", note);
+      for (let note of sc._notes) console.log("%c%s", "padding:5px;font-size:18px;line-height:130%;", note);
       console.groupEnd();
     }
     for (let slide of slideDivs) slide.style.display = slide._i === n ? "" : "none";
