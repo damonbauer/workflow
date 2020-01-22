@@ -59,7 +59,7 @@
     <notes>
       The most important thing to ensure is that this new piece of work still provides user value.
 
-      If the user can still perform the task they need, you're on the right track. Now it becomes a discussion with designers to ensure what will be delivered is an acceptable first iteration.
+      If the user can still perform the task they need, you're on the right track. Now it becomes a discussion with the rest of your team to ensure what will be delivered is an acceptable first iteration.
     </notes>
   </div>
 
@@ -69,9 +69,9 @@
     <div class="part-marker">part 1: design: ruthlessly cut scope</div>
 
     <notes>
-      Here are 2 screenshots from a "transfer funds" feature we built. The goal was to enable a user to transfer funds from a connected bank account into their Gazelle account. On the left was the mockup, on the right was what we delivered as a 1st iteration.
+      Here are 2 screenshots from a "transfer funds" feature we built. The goal was to enable a user to transfer funds from a connected bank account into their Gazelle account. On the left was the mockup, on the right was what we delivered as a _3rd_ iteration.
 
-      Things we cut included: bank icons, custom select box, account balances & numbers, to/from toggle, schedule transfer, withdraw & deposit estimates.
+      Things we cut included: bank icons, custom select box, account balances & numbers, to/from toggle, scheduling the transfer, withdraw & deposit estimates.
 
       This was around 4 months ago... and we're still using what's on the right. We'll eventually get to improving it, but we're solving more important problems right now.
     </notes>
@@ -82,6 +82,12 @@
     <div class="part-marker">part 1: design: ruthlessly cut scope</div>
     <notes>
       The small piece of work should help build a foundation to help you iterate quickly.
+
+      For example, our very first iteration of this feature was a page that had a single button of "Transfer $25". That's it. You could transfer $25 into Gazelle.
+
+      This didn't box us in because we were able to build all the code behind the scenes to accept an account to transfer from, an account to transfer to, and an amount. We were able to both ship _something_ and build the back end functionality we'd need no matter what the interface is.
+
+      That leads me to the last point - ship quickly & learn.
     </notes>
   </div>
 
@@ -89,7 +95,11 @@
     ship quickly & learn
     <div class="part-marker">part 1: design: ruthlessly cut scope</div>
     <notes>
-      * what can you ship _fast_? How can you use your first iteration to learn?
+      The point of this exercise is to ship as fast as you can, so you can begin learning how real people interact with your product in real environments.
+
+      This isn't limited to just "did a user like this feature" either.
+      For instance... the number of times I've been bitten by a CloudFront configuration not forwarding query parameters, or not accepting cookies... is embarrasing.
+      However, if we ship something out to production quickly, we are able to find those things that much faster. In this sort of problem, having shipped small pieces rules out a lot of "potential" problems, so it's easier to find that my cookies aren't being whitelisted.
     </notes>
   </div>
 
@@ -98,8 +108,11 @@
     <div class="part-marker">part 1: design</div>
 
     <notes>
-      * Now that we have an understanding about _what_ we're trying to build, let's talk about building it.
-      * Pull Requests _should be_ the manifestation of all the planning your team has _already_ done & agreed to before touching code.
+      Now that we have an understanding about how we're trying to go about building things, let's talk about actually building it. Before we even write the code, though, we can flex our software "design" muscle. That's what we'll focus on for the next few minutes.
+      
+      Let me say this from the top: Pull Requests _should be_ the manifestation of all the planning your team has gone through & agreed to _before_ touching code.
+
+      Let's talk about why.
     </notes>
   </div>
 
@@ -108,7 +121,9 @@
     <div class="part-marker">part 1: design: before code</div>
 
     <notes>
-      * Use your team as a sounding board to discuss ideas, tradeoffs, work through logic
+      When we pair or even group up, you're able to use the team as a sounding board to discuss ideas, tradeoffs and work through logic decisions.
+
+      We have a saying here, "If you want to go fast, work alone. If you want to go far, work together." This is never more true than applying it to this idea. When I plan how to solve a problems _together_, I inevitably end up with a better solution. We're able to bounce ideas off one another, think of different edge cases and talk through different patterns.
     </notes>
   </div>
 
@@ -117,7 +132,9 @@
     <div class="part-marker">part 1: design: before code</div>
 
     <notes>
-      * Think of just some of the reasons why you might be out of the office or even away from your desk. Sick time, vacation, DMV, meetings (this one included)... there are plenty of times where a teammate could pick up where you left off. This is why planning the work with your team is crucial. Everyone should have a decent understanding of what we're building and a pretty solidified idea on how.
+      This idea piggybacks off the last. If we're working as a group to solve a problem, we all get context and learn a little more about how our systems work.
+
+      Think of just some of the reasons why you might be out of the office or even away from your desk. Sick time, vacation, DMV, meetings (this one included)... there are plenty of times where a teammate could pick up where you left off. This is why planning the work with your team is crucial. Everyone should have a decent understanding of what we're building and a pretty solidified idea on how.
     </notes>
   </div>
 
@@ -126,18 +143,29 @@
     <div class="part-marker">part 1: design: before code</div>
 
     <notes>
-      * If you make one big PR that has a concept baked in that is "wrong", it's very difficult to change.
-      * However, in the scenarios I'm proposing, your team has agreed on how to build something and everyone has the context of what we're building. Also, you'll be making very small PRs. These 3 pieces make it trivial for a teammate to call out a "wrong" concept & it's also easy for you to fix it before it is proliferated throughout the code.
+      If I make one big PR and I'm the only one with the context of how and why it works, and that PR has some concept baked in that is "wrong", it's very difficult to change, especially if it's all throughout the PR.
+
+      However, in the scenarios I'm proposing, your team has agreed on how to build something and we should all have the context of what we're building. Also, you'll be making very small PRs. These 3 facts make it trivial for a teammate to call out a "wrong" concept early on in the process so it's easier for you to fix it before it is proliferated throughout the code.
     </notes>
   </div>
 
   <div>
     artifacts
+
+    <notes>
+      OK, so we've got an idea of _how_ we want to work, and we know _why_ it's valuable. How do we _actually_ do this?
+
+      The big outcome of this "pre-work" are design artifacts.
+    </notes>
   </div>
 
   <div>
     is/is not
     <div class="part-marker">part 1: design: artifacts</div>
+
+    <notes>
+      One of the clearest, most succinct ways I've found to communicate our intentions as developers is to create an is/is not table.
+    </notes>
   </div>
 
   <div>
@@ -145,14 +173,19 @@
     <div class="part-marker">part 1: design: artifacts: is/is not</div>
 
     <notes>
-      * Intended to provide a high level overview about the scope upcoming work.
-      * Helps decide what to include & what to exclude by focusing attention by providing distint boundaries.
+      Here's an example. These tables are intended to provide a high level overview about the scope upcoming work.
+      
+      It helps the author decide what to include - and just as important - what to exclude, by focusing attention by providing distinct boundaries.
     </notes>
   </div>
 
   <div>
     <img src="images/is-isnot-2.png">
     <div class="part-marker">part 1: design: artifacts: is/is not</div>
+
+    <notes>
+      is/is not tables are meant to be very scannable & consumable. The're not exhaustive or detailed.
+    </notes>
   </div>
 
   <div>
@@ -250,6 +283,10 @@
     <img src="images/subtasks-1.png">
     <img src="images/subtasks-2.png">
     <div class="part-marker">part 2: always be shipping: how</div>
+
+    <notes>
+      Towards the end of last year, Brendan introduced this idea of "concurrency". Working like this _forces_ concurrency.
+    </notes>
   </div>
 
   <div>
