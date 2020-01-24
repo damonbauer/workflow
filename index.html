@@ -26,12 +26,14 @@
 
       One thing you'll probably notice as I speak is that this talk has almost nothing to do with the actual code you write. This talk has much more to do with how you communicate, think about problems, and find solutions that serve your team, the business, and ultimately the users of your code.
 
+      One thing I want to highlight... keep this in mind throughout this talk - a core value of the Front End Chapter is to: "ship value first & early, and talk to our customers"
+
       ******** FIND A GOOD EXAMPLE OF A FEATURE THAT WE BROKE DOWN ********
     </notes>
   </div>
 
   <div>
-    part 1: design
+    part 1: plan
 
     <notes>
       How do we break this work down? 
@@ -40,7 +42,7 @@
 
   <div>
     <em>ruthlessly</em> cut scope
-    <div class="part-marker">part 1: design</div>
+    <div class="part-marker">part 1: plan</div>
 
     <notes>
       * Alongside designers and product managers, ask these questions:
@@ -54,7 +56,7 @@
 
   <div>
     provide <em>some</em> user value
-    <div class="part-marker">part 1: design: ruthlessly cut scope</div>
+    <div class="part-marker">part 1: plan: ruthlessly cut scope</div>
 
     <notes>
       The most important thing to ensure is that this new piece of work still provides user value.
@@ -66,7 +68,7 @@
   <div>
     <img src="images/cut-scope-mockup.png">
     <img src="images/cut-scope-v1.png">
-    <div class="part-marker">part 1: design: ruthlessly cut scope</div>
+    <div class="part-marker">part 1: plan: ruthlessly cut scope</div>
 
     <notes>
       Here are 2 screenshots from a "transfer funds" feature we built. The goal was to enable a user to transfer funds from a connected bank account into their Gazelle account. On the left was the mockup, on the right was what we delivered as a _3rd_ iteration.
@@ -79,7 +81,7 @@
 
   <div>
     don't box yourself in
-    <div class="part-marker">part 1: design: ruthlessly cut scope</div>
+    <div class="part-marker">part 1: plan: ruthlessly cut scope</div>
     <notes>
       The small piece of work should help build a foundation to help you iterate quickly.
 
@@ -92,8 +94,8 @@
   </div>
 
   <div>
-    ship quickly & learn
-    <div class="part-marker">part 1: design: ruthlessly cut scope</div>
+    learn
+    <div class="part-marker">part 1: plan: ruthlessly cut scope</div>
     <notes>
       The point of this exercise is to ship as fast as you can, so you can begin learning how real people interact with your product in real environments.
 
@@ -105,7 +107,7 @@
 
   <div>
     before code
-    <div class="part-marker">part 1: design</div>
+    <div class="part-marker">part 1: plan</div>
 
     <notes>
       Now that we have an understanding about how we're trying to go about building things, let's talk about actually building it. Before we even write the code, though, we can flex our software "design" muscle. That's what we'll focus on for the next few minutes.
@@ -117,8 +119,8 @@
   </div>
 
   <div>
-    get feedback early
-    <div class="part-marker">part 1: design: before code</div>
+    early feedback
+    <div class="part-marker">part 1: plan: before code</div>
 
     <notes>
       When we pair or even group up, you're able to use the team as a sounding board to discuss ideas, tradeoffs and work through logic decisions.
@@ -129,7 +131,7 @@
 
   <div>
     share context
-    <div class="part-marker">part 1: design: before code</div>
+    <div class="part-marker">part 1: plan: before code</div>
 
     <notes>
       This idea piggybacks off the last. If we're working as a group to solve a problem, we all get context and learn a little more about how our systems work.
@@ -139,8 +141,8 @@
   </div>
 
   <div>
-    avoid costly mistakes
-    <div class="part-marker">part 1: design: before code</div>
+    avoid rework
+    <div class="part-marker">part 1: plan: before code</div>
 
     <notes>
       If I make one big PR and I'm the only one with the context of how and why it works, and that PR has some concept baked in that is "wrong", it's very difficult to change, especially if it's all throughout the PR.
@@ -161,7 +163,7 @@
 
   <div>
     is/is not
-    <div class="part-marker">part 1: design: artifacts</div>
+    <div class="part-marker">part 1: plan: artifacts</div>
 
     <notes>
       One of the clearest, most succinct ways I've found to communicate our intentions as developers is to create an is/is not table.
@@ -170,7 +172,7 @@
 
   <div>
     <img src="images/is-isnot-1.png">
-    <div class="part-marker">part 1: design: artifacts: is/is not</div>
+    <div class="part-marker">part 1: plan: artifacts: is/is not</div>
 
     <notes>
       Here's an example. These tables are intended to provide a high level overview about the scope upcoming work.
@@ -181,7 +183,7 @@
 
   <div>
     <img src="images/is-isnot-2.png">
-    <div class="part-marker">part 1: design: artifacts: is/is not</div>
+    <div class="part-marker">part 1: plan: artifacts: is/is not</div>
 
     <notes>
       is/is not tables are meant to be very scannable & consumable. The're not exhaustive or detailed.
@@ -190,90 +192,136 @@
 
   <div>
     diagrams
-    <div class="part-marker">part 1: design: artifacts</div>
-  </div>
-
-  <div>
-    <img src="images/lucidchart-1.png">
-    <div class="part-marker">part 1: design: artifacts: diagrams</div>
-  </div>
-
-  <div>
-    <img src="images/lucidchart-2.png">
-    <div class="part-marker">part 1: design: artifacts: diagrams</div>
-  </div>
-
-  <div>
-    design docs
-    <div class="part-marker">part 1: design: artifacts</div>
-  </div>
-
-  <div>
-    <img src="images/design-doc.png">
-    <div class="part-marker">part 1: design: artifacts: design docs</div>
+    <div class="part-marker">part 1: plan: artifacts</div>
 
     <notes>
-      * Explain the "what", add documentation & list proposed subtasks.
-      * By reading this document, anyone on your team should be able to understand what will be worked on & how you plan to approach implementing it.
-      * Pieces:
-        * JIRA ticket link
-        * High level summary
-        * Diagrams
-        * Proposed Subtasks
+      In Zach Olsen's training class about documentation, he mentions "favor images over bullets over paragraphs".
+
+      Diagrams are great way to visualize different parts of a system, user flow through a feature, how to trace code through different areas of the codebase and high level application pieces. There are many more uses for diagrams, so explore & try using them.
     </notes>
   </div>
 
   <div>
-    part 2: always be shipping
+    <img src="images/lucidchart-1.png">
+    <div class="part-marker">part 1: plan: artifacts: diagrams</div>
+
+    <notes>
+      This is a very high level overview of tracing the code & server responses for when a user logs into Gazelle. This is intended for someone who is not actively in the project to know "what happens when a user logs in?"
+    </notes>
+  </div>
+
+  <div>
+    <img src="images/lucidchart-2.png">
+    <div class="part-marker">part 1: plan: artifacts: diagrams</div>
+
+    <notes>
+      This is a diagram mainly aimed at stakeholders, to describe the "actors" in Gazelle. 
+    </notes>
+  </div>
+
+  <div>
+    <img src="images/lucidchart-3.png">
+    <div class="part-marker">part 1: plan: artifacts: diagrams</div>
+
+    <notes>
+      Finally, here's a diagram to decide what "name" to display for a transaction. Once you've diagramed the "what", it becomes much easier to write code because it's just an implementation of the logic you've already thought through in the diagram. You're not having to simultaneously figure out "what" you're solving and find an elegant coding pattern to figure out the "how".
+    </notes>
+  </div>
+
+  <div>
+    design docs
+    <div class="part-marker">part 1: plan: artifacts</div>
+
+    <notes>
+      One of my favorite artifacts to make is what we call a "design document". It's more or less the "master" document that captures all of the other things you & your team has put together.
+    </notes>
+  </div>
+
+  <div>
+    <img src="images/design-doc.png">
+    <div class="part-marker">part 1: plan: artifacts: design docs</div>
+
+    <notes>
+      I build design documents that aim to explain the "what", combine documentation sources & list proposed subtasks.
+
+      By reading this document, anyone on your team should be able to understand what will be worked on & how you plan to approach implementing it.
+
+      It's also a great reference for yourself as you build the feature. Because the work has already been planned out, now it's just about executing. In my experience, it's much easier to jump back into writing the code after a context switch, lunch, meetings, or the start of a new day because I have all the context of what I'm building right here.
+    </notes>
+  </div>
+
+  <div>
+    part 2: execute
   </div>
 
   <div>
     deliver <em>something</em>
-    <div class="part-marker">part 2: always be shipping</div>
+    <div class="part-marker">part 2: execute</div>
     <notes>
-      * Aim to ship some part of a feature before it's polished or complete.
+      As I talked about earlier, the whole point of this workflow is aimed at shipping some part of a feature before it's polished or complete.
     </notes>
   </div>
 
   <div>
     why
 
-    <div class="part-marker">part 2: always be shipping</div>
+    <div class="part-marker">part 2: execute</div>
+
+    <notes>
+      Let's talk about why we would do that.
+    </notes>
   </div>
 
   <div>
     low commitment
-    <div class="part-marker">part 2: always be shipping: why</div>
+    <div class="part-marker">part 2: execute: why</div>
+
+    <notes>
+      By working like this, we're OK with the fact the code we're writing has a very good chance of being deleted, or at least being re-written almost completely. We need to hold our code with open hands, because at the end of the day what matters is that the code solves a user problem.
+
+      By shipping small pieces of work, we're able to decide whether to keep going on that feature based on user feedback. If our user's tell us that the feature isn't right, we haven't lost weeks/months of work.
+    </notes>
   </div>
 
   <div>
     feedback
-    <div class="part-marker">part 2: always be shipping: why</div>
-  </div>
+    <div class="part-marker">part 2: execute: why</div>
 
-  <div>
-    avoid potentially unneeded work
-    <div class="part-marker">part 2: always be shipping: why</div>
+    <notes>
+      Again, we get feedback early & often from our users. This can be directly from them in the form of surveys, calls or user tests. Or it can be indirectly, in the form of analytics, engagement or business metrics.
+    </notes>
   </div>
 
   <div>
     metrics
-    <div class="part-marker">part 2: always be shipping: why</div>
+    <div class="part-marker">part 2: execute: why</div>
+
+    <notes>
+      One unexpected benefit of working like this that we found on the Gazelle team is that our product manager is able to predict our work rate more accurately. She can then take information to stakeholders and our business can make an informed decision on what to build next.
+    </notes>
   </div>
 
   <div>
     how 
     
-    <div class="part-marker">part 2: always be shipping</div>
+    <div class="part-marker">part 2: execute</div>
+
+    <notes>
+      Now I want to talk _practically_ about how we can work like this and be successful.
+    </notes>
   </div>
 
   <div>
     tickets as user value
     
-    <div class="part-marker">part 2: always be shipping: how</div>
+    <div class="part-marker">part 2: execute: how</div>
 
     <notes>
-      Tickets should be written so as they move across the board, user value is being delivered. On Gazelle, we make a parent ticket that describes the feature that has all the acceptance criteria, testing notes & user stories. Then, we make sub tasks that we'll use to track our work. So the parent ticket acts almost as an "epic".
+      This idea will probably sound foreign to you. It will probably also sound like a terrible idea. But trust me, it works.
+
+      First: Jira tickets don't exist just for you as a developer. Instead, they exist for stakeholders to know _what_ we're working on. They should be written so that as they move across the board, user value is being delivered and everyone knows what that value is.
+
+      On Gazelle, we make a parent ticket that describes the feature that has all the acceptance criteria, testing notes & user stories. Then, we make _sub tasks_ that we'll use to track our work. So the parent ticket acts almost as an "epic".
 
       It's common for a ticket to have 10-15, sometimes 20, subtasks if it's a brand new feature.
     </notes>
@@ -282,120 +330,152 @@
   <div class="layout" style="grid-template-columns: 50% 50%;">
     <img src="images/subtasks-1.png">
     <img src="images/subtasks-2.png">
-    <div class="part-marker">part 2: always be shipping: how</div>
+    <div class="part-marker">part 2: execute: how</div>
 
     <notes>
-      Towards the end of last year, Brendan introduced this idea of "concurrency". Working like this _forces_ concurrency.
-    </notes>
-  </div>
+      Towards the end of last year, Brendan introduced this idea of "concurrency". Working like this _forces_ concurrency. It enables us to say "we know we need an API, so what should it return?"
 
-  <div>
-    plan ahead
-    
-    <div class="part-marker">part 2: always be shipping: how</div>
+      We can agree on the API response, and start building a UI with dummy data that we know we'll get back from the API. At the same time, the API can be built & be hardcoded to return dummy data. While that dummy data is being returned, the we can build code to call that API and get that same dummy data back that we first built the UI with. Then, once the API is functional, it's a simple "verification" that our UI is still working as expected.
+    </notes>
   </div>
 
   <div>
     small PRs
     
-    <div class="part-marker">part 2: always be shipping: how</div>
+    <div class="part-marker">part 2: execute: how</div>
+
+    <notes>
+      The other component to breaking the work down to lots of subtasks is making small PRs. I aim for around 300 lines of code changed. Any more than that, I start to question if there's too much happening.
+
+      This is very important: 1 Jira ticket does not mean 1 PR. You can have multiple PRs against a ticket. In fact, it probably means you're breaking the work down well & focusing on one thing.
+    </notes>
   </div>
 
   <div>
     small PRs - why?
     
-    <div class="part-marker">part 2: always be shipping: how: small PRs</div>
+    <div class="part-marker">part 2: execute: how: small PRs</div>
   </div>
 
   <div>
     faster & more thorough reviews
     
-    <div class="part-marker">part 2: always be shipping: how: small PRs - why?</div>
+    <div class="part-marker">part 2: execute: how: small PRs - why?</div>
+
+    <notes>
+      When we have small, focused PRs, we are able to receive a review faster and the review is able to be more intentional with their feedback since there should only be a small handful of concepts.
+    </notes>
   </div>
 
   <div>
     easier to understand
     
-    <div class="part-marker">part 2: always be shipping: how: small PRs - why?</div>
+    <div class="part-marker">part 2: execute: how: small PRs - why?</div>
 
     <notes>
-      * both the actual changes in the PR AND how the changes fit into the larger system
+      As a reviewer, a small, focused PR helps you understand both the changes in the PR AND how the changes fit into the larger system.
     </notes>
   </div>
 
   <div>
     easier to course correct
     
-    <div class="part-marker">part 2: always be shipping: how: small PRs - why?</div>
+    <div class="part-marker">part 2: execute: how: small PRs - why?</div>
 
     <notes>
+      This goes hand in hand with what I talked earlier about avoiding rework.
+
+      A small PR makes it easy to find and call out a bad concept early on in the process so it's easier for you to fix it before it is proliferated throughout the code.
     </notes>
   </div>
 
   <div>
-    fewer bugs, merge conflicts, & context switches
+    fewer bugs, merge conflicts
 
-    <div class="part-marker">part 2: always be shipping: how: small PRs - why?</div>
+    <div class="part-marker">part 2: execute: how: small PRs - why?</div>
 
     <notes>
+      If we are focusing on building a PR with a narrow focus, and the reviewer has that narrow focus to review, it makes the likelhood of finding a bug much higher, leading to more a more bug-free codebase.
+
+      Small PRs also help reduce merge conflicts because the number of files changed in a PR is likely lower and the changes are more contained. 
     </notes>
   </div>
 
   <div>
     code is shareable faster
 
-    <div class="part-marker">part 2: always be shipping: how: small PRs - why?</div>
+    <div class="part-marker">part 2: execute: how: small PRs - why?</div>
 
     <notes>
+      If your team is dividing and conquering your subtask list, there's a good chance a piece of work needs done first so another one can be worked on. Shipping a small PR means that a dependent piece of code is available quicker, enabling that concurrent work to happen.
     </notes>
   </div>
 
   <div>
     small PRs -  how?
     
-    <div class="part-marker">part 2: always be shipping: how: small PRs</div>
+    <div class="part-marker">part 2: execute: how: small PRs</div>
+
+    <notes>
+      Of course, we want to author & merge these PRs quickly, so we can't block the runway while the rest of the feature is built. Let's talk about a few ways we can continually ship these small PRs.
+    </notes>
   </div>
 
   <div>
     hidden URL
     
-    <div class="part-marker">part 2: always be shipping: how: small PRs - how?</div>
+    <div class="part-marker">part 2: execute: how: small PRs - how?</div>
+
+    <notes>
+      You could add a new, hidden URL to your project and develop the feature there. As long as it's never linked there, you should be good.
+    </notes>
   </div>
 
   <div>
     hidden UI
     
-    <div class="part-marker">part 2: always be shipping: how: small PRs - how?</div>
+    <div class="part-marker">part 2: execute: how: small PRs - how?</div>
 
     <notes>
-      * div, button click, gesture
+      This could be a hidden div, if it's just a visual change. Or, to initiate a new feature, you could put it behind a certain button click, or a gesture like a triple click on an element.
     </notes>
   </div>
 
   <div>
     feature flags
     
-    <div class="part-marker">part 2: always be shipping: how: small PRs - how?</div>
+    <div class="part-marker">part 2: execute: how: small PRs - how?</div>
 
     <notes>
-      * custom, optimizely rollouts
+      Wrapping code at the highest level in a feature flag is a great way to hide it until it's "turned on". You could use something like Optimzely Rollouts, or something custom. Jason York is a good resource to talk about what's available around the company for feature flags.
+
+      Something we do in Gazelle is wrap some code in a conditional, like "if there is a `flag` query parameter with value of "foo", we can visit a page with that query param and that wrapped code will become visible.
     </notes>
   </div>
 
   <div>
-    wire it up last
-    
-    <div class="part-marker">part 2: always be shipping: how: small PRs - how?</div>
-
-    <notes>
-      * Write business logic first. Usually the last PR in a set is "wiring it up", which is tiny.
-    </notes>
+    <ul>
+      <li>
+        plan
+        <ul>
+          <li><em>ruthlessly</em> cut scope</li>
+          <li>leave artifacts</li>      
+        </ul>
+      </li>
+      <li>
+        execute
+        <ul>
+          <li>tickets as user value</li>
+          <li>small PRs</li>
+        </ul>
+      </li>
+    </ul>
   </div>
-
-  <div>
+  
+  <!-- <div>
     commit messages
     
-    <div class="part-marker">part 2: always be shipping: how</div>
+    <div class="part-marker">part 2: execute: how</div>
 
     <notes></notes>
   </div>
@@ -403,9 +483,9 @@
   <div>
     more detail is better
     
-    <div class="part-marker">part 2: always be shipping: how: commit messages</div>
+    <div class="part-marker">part 2: execute: how: commit messages</div>
 
     <notes></notes>
-  </div>
+  </div> -->
 </body>
 </html>
