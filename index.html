@@ -79,7 +79,7 @@
 
       This was around 4 months ago... and we're still using what's on the right.
 
-      We cared more about getting money into Gazelle so they could use their card (and we make money) than to delay that work adding all those extra things. It's our goal to make Gazelle worthy of someone's _primary_ bank account, which means they should be setting up direct deposit into Gazelle. Ultimately, that means this transfer funds feature will become less and less relvant. We're thinking long term and not putting work into something that we hope won't be used much.
+      We cared more about users getting money into Gazelle so they could use their card (and we make money) than to delay that work adding all those extra things. It's our goal to make Gazelle worthy of someone's _primary_ bank account, which means they should be setting up direct deposit into Gazelle. Ultimately, that means this transfer funds feature will become less and less relvant. We're thinking long term and not putting work into something that we hope won't be used much.
     </notes>
   </div>
 
@@ -87,7 +87,7 @@
     don't box yourself in
     <div class="part-marker">part 1: plan: ruthlessly cut scope</div>
     <notes>
-      The second thing we need to ensure when cutting scope is to ensure we aren't boxing ourselves in. The small piece of work should help build a foundation to help you iterate quickly.
+      The second thing we need to ensure when cutting scope is that we don't box ourselves in. The small piece of work should help build a foundation for us to iterate quickly.
 
       Our very first iteration of the transfer funds feature was a page that had a single button on it that said "Transfer $25". That's it. You could transfer $25 into Gazelle.
 
@@ -229,7 +229,9 @@
     <div class="part-marker">part 1: plan: artifacts: diagrams</div>
 
     <notes>
-      Finally, here's a diagram to decide what "name" to display for a transaction. Once you've diagramed the "what", it becomes much easier to write code because it's just an implementation of the logic you've already thought through in the diagram. You're not having to simultaneously figure out "what" you're solving and find an elegant coding pattern to figure out the "how".
+      Finally, here's a diagram to decide what "name" to display for a transaction based on the JSON response from our API.
+
+      Once we've diagramed the "what", it becomes much easier to write code because it's we've already determined what needs done & how we plan to do it. It becomes a matter of implementing the logic we've already thought through in the diagram. We're not having to simultaneously figure out "what" we're solving and find an elegant coding pattern to figure out the "how".
     </notes>
   </div>
 
@@ -238,7 +240,7 @@
     <div class="part-marker">part 1: plan: artifacts</div>
 
     <notes>
-      One of my favorite artifacts to make is what we call a "design document". It's more or less the "master" document that captures all of the other things you & your team has put together.
+      One of my favorite artifacts to make is what we call a "design document". I like to think of this as the "master document" that captures all of the other things our team has put together.
     </notes>
   </div>
 
@@ -249,7 +251,7 @@
     <notes>
       I build design documents that aim to explain the "what", combine documentation sources & list proposed subtasks.
 
-      By reading this document, anyone on your team should be able to understand what will be worked on & how you plan to approach implementing it.
+      By reading this document, anyone on our teams should be able to understand what will be worked on & how we plan to approach implementing it.
 
       It's also a great reference for yourself as you build the feature. Because the work has already been planned out, now it's just about executing. In my experience, it's much easier to jump back into writing the code after a context switch, lunch, meetings, or the start of a new day because I have all the context of what I'm building right here.
     </notes>
@@ -257,23 +259,20 @@
 
   <div>
     part 2: execute
+
+    <notes>
+      Now, we move on to part 2, execute. We've talked about _how_ we want to approach our work and about _why_ we approach it that way. Let's talk about _doing_ the work and the benefits.
+    </notes>
   </div>
 
   <div>
     deliver <em>something</em>
     <div class="part-marker">part 2: execute</div>
-    <notes>
-      As I talked about earlier, the whole point of this workflow is aimed at shipping some part of a feature before it's polished or complete.
-    </notes>
-  </div>
-
-  <div>
-    why
-
-    <div class="part-marker">part 2: execute</div>
 
     <notes>
-      Let's talk about why we would do that.
+      The first benefit of this type of process is that we are able deliver _something_, no matter how small.
+
+      The whole point of this workflow is aimed at shipping some part of a feature before it's polished or complete.
     </notes>
   </div>
 
@@ -282,7 +281,7 @@
     <div class="part-marker">part 2: execute: why</div>
 
     <notes>
-      By working like this, we're OK with the fact the code we're writing has a very good chance of being deleted, or at least being re-written almost completely. We need to hold our code with open hands, because at the end of the day what matters is that the code solves a user problem.
+      By working like this, we're OK with the fact the code we're writing has a very good chance of being deleted, or at least being re-written almost completely. We need to hold our code with open hands, because at the end of the day what matters is that the code provides for a user's need.
 
       By shipping small pieces of work, we're able to decide whether to keep going on that feature based on user feedback. If our user's tell us that the feature isn't right, we haven't lost weeks/months of work.
     </notes>
@@ -302,7 +301,7 @@
     <div class="part-marker">part 2: execute: why</div>
 
     <notes>
-      One unexpected benefit of working like this that we found on the Gazelle team is that our product manager is able to predict our work rate more accurately. She can then take information to stakeholders and our business can make an informed decision on what to build next.
+      Speaking of business metrics... one unexpected benefit of working like this - cutting scope, breaking down work into small chunks, planning ahead to avoid rework - that we found on the Gazelle team: our product manager is able to predict our work rate more accurately. She can then take information to stakeholders and our business can make an informed decision on what to build next.
     </notes>
   </div>
 
@@ -312,7 +311,7 @@
     <div class="part-marker">part 2: execute</div>
 
     <notes>
-      Now I want to talk _practically_ about how we can work like this and be successful.
+      Now I want to talk _practically_ about how we can work like this on a daily basis and be successful as a team.
     </notes>
   </div>
 
@@ -326,9 +325,9 @@
 
       First: Jira tickets don't exist just for you as a developer. Instead, they exist for stakeholders to know _what_ we're working on. They should be written so that as they move across the board, user value is being delivered and everyone knows what that value is.
 
-      On Gazelle, we make a parent ticket that describes the feature that has all the acceptance criteria, testing notes & user stories. Then, we make _sub tasks_ that we'll use to track our work. So the parent ticket acts almost as an "epic".
+      On Gazelle, we make a parent ticket that describes the feature that has all the acceptance criteria, testing notes & user stories. Then, we make _subtasks_ that we'll use to track our work. Think of this parent ticket like an "epic".
 
-      It's common for a ticket to have 10-15, sometimes 20, subtasks if it's a brand new feature.
+      It's common for a ticket to have 10-15, sometimes 20, subtasks, especially if it's a brand new feature.
     </notes>
   </div>
 
@@ -340,7 +339,10 @@
     <notes>
       Towards the end of last year, Brendan introduced this idea of "concurrency". Working like this _forces_ concurrency. It enables us to say "we know we need an API, so what should it return?"
 
-      We can agree on the API response, and start building a UI with dummy data that we know we'll get back from the API. At the same time, the API can be built & be hardcoded to return dummy data. While that dummy data is being returned, the we can build code to call that API and get that same dummy data back that we first built the UI with. Then, once the API is functional, it's a simple "verification" that our UI is still working as expected.
+      We can agree on the API response, and start building a UI with dummy data that we know we'll get back from the API.
+      At the same time, the API can be built & be hardcoded to return dummy data.
+      While that dummy data is being returned, the we can build code to call that API and get that same dummy data back that we first built the UI with.
+      Then, once the API is functional, it's a simple "verification" that our UI is still working as expected.
     </notes>
   </div>
 
@@ -350,9 +352,9 @@
     <div class="part-marker">part 2: execute: how</div>
 
     <notes>
-      The other component to breaking the work down to lots of subtasks is making small PRs. I aim for around 300 lines of code changed. Any more than that, I start to question if there's too much happening.
+      The other component to breaking the work down to lots of subtasks is making small PRs. I aim for around 300 lines of code changed. Any more than that, I start to question if there's too many unrelated concepts going on.
 
-      This is very important: 1 Jira ticket does not mean 1 PR. You can have multiple PRs against a ticket. In fact, it probably means you're breaking the work down well & focusing on one thing.
+      This is very important: 1 Jira ticket does not mean 1 PR. We can have multiple PRs against a ticket. In fact, it probably means we're breaking the work down well & focusing on one thing well.
     </notes>
   </div>
 
@@ -360,6 +362,10 @@
     small PRs - why?
     
     <div class="part-marker">part 2: execute: how: small PRs</div>
+
+    <notes>
+      Why are small PRs a good idea?
+    </notes>
   </div>
 
   <div>
@@ -368,7 +374,7 @@
     <div class="part-marker">part 2: execute: how: small PRs - why?</div>
 
     <notes>
-      When we have small, focused PRs, we are able to receive a review faster and the review is able to be more intentional with their feedback since there should only be a small handful of concepts.
+      When we have small, focused PRs, we are able to receive a review faster and the reviewer can more intentional with their feedback, since there should only be a small handful of concepts.
     </notes>
   </div>
 
@@ -378,7 +384,7 @@
     <div class="part-marker">part 2: execute: how: small PRs - why?</div>
 
     <notes>
-      As a reviewer, a small, focused PR helps you understand both the changes in the PR AND how the changes fit into the larger system.
+      As a reviewer, a small, focused PR helps us understand both the changes in the PR AND how the changes fit into the larger system.
     </notes>
   </div>
 
@@ -390,29 +396,31 @@
     <notes>
       This goes hand in hand with what I talked earlier about avoiding rework.
 
-      A small PR makes it easy to find and call out a bad concept early on in the process so it's easier for you to fix it before it is proliferated throughout the code.
+      A small PR makes it easy to find and call out a bad concept early on in the process so it's easier for us to fix it before it is proliferated throughout the code.
     </notes>
   </div>
 
   <div>
-    fewer bugs, merge conflicts
+    fewer bugs & merge conflicts
 
     <div class="part-marker">part 2: execute: how: small PRs - why?</div>
 
     <notes>
-      If we are focusing on building a PR with a narrow focus, and the reviewer has that narrow focus to review, it makes the likelhood of finding a bug much higher, leading to more a more bug-free codebase.
+      When we focus on building a PR with a narrow focus, the reviewer can hone in on specific concepts, patterns and logic. It makes the likelhood of finding a bug much higher, leading to more a more bug-free codebase.
 
-      Small PRs also help reduce merge conflicts because the number of files changed in a PR is likely lower and the changes are more contained. 
+      Small PRs also help reduce merge conflicts because the number of files changed in a PR is likely lower and the changes are more contained.
     </notes>
   </div>
 
   <div>
-    code is shareable faster
+    share code earlier
 
     <div class="part-marker">part 2: execute: how: small PRs - why?</div>
 
     <notes>
-      If your team is dividing and conquering your subtask list, there's a good chance a piece of work needs done first so another one can be worked on. Shipping a small PR means that a dependent piece of code is available quicker, enabling that concurrent work to happen.
+      If our teams are dividing and conquering the subtask list, there's a good chance a piece of work needs done first to unlock another piece of work to be worked on.
+
+      Shipping a small PR means that a dependent piece of code is available quicker, enabling that concurrent work to happen.
     </notes>
   </div>
 
@@ -432,7 +440,7 @@
     <div class="part-marker">part 2: execute: how: small PRs - how?</div>
 
     <notes>
-      You could add a new, hidden URL to your project and develop the feature there. As long as it's never linked there, you should be good.
+      We could add a new, hidden URL to the project and develop the feature there. As long as it's never linked there, it should be fine to go all the way to production with no fear of breaking the project.
     </notes>
   </div>
 
@@ -442,7 +450,7 @@
     <div class="part-marker">part 2: execute: how: small PRs - how?</div>
 
     <notes>
-      This could be a hidden div, if it's just a visual change. Or, to initiate a new feature, you could put it behind a certain button click, or a gesture like a triple click on an element.
+      This could be a hidden div if it's just a visual change. Or, to initiate a new feature, we could hide an element behind a certain button click or a gesture like a triple click on something.
     </notes>
   </div>
 
@@ -452,9 +460,9 @@
     <div class="part-marker">part 2: execute: how: small PRs - how?</div>
 
     <notes>
-      Wrapping code at the highest level in a feature flag is a great way to hide it until it's "turned on". You could use something like Optimzely Rollouts, or something custom. Jason York is a good resource to talk about what's available around the company for feature flags.
+      Wrapping code at the highest level in a feature flag is a great way to hide it until the flag is "turned on". We can use something like Optimzely Rollouts, or something custom. Jason York is a good resource to talk about what's available around the company for feature flags.
 
-      Something we do in Gazelle is wrap some code in a conditional, like "if there is a `flag` query parameter with value of "foo", we can visit a page with that query param and that wrapped code will become visible.
+      In Gazlle, we wrap code in feature flags all the time. Let's say we have an element that is rendered if the "foo" flag is active. Using a query parameter in the URL, we can visit a page with that query param and that wrapped code will become visible so we can test it.
     </notes>
   </div>
 
@@ -475,22 +483,20 @@
         </ul>
       </li>
     </ul>
+
+    <notes>
+      Let's recap. As I said at the beginning of this talk, a core value of the front end chapter is to "ship value first & early, and talk to our customers".
+
+      I believe that when we:
+      - ruthlessly cut scope
+      - leave lots of design artifacts
+      - author tickets that are user value driven, and
+      - constantly ship code using small PRs,
+
+      we are able to ship code to our customers faster, get feedback earlier, and deliver hope to people who need it most.
+
+      Thanks!
+    </notes>
   </div>
-  
-  <!-- <div>
-    commit messages
-    
-    <div class="part-marker">part 2: execute: how</div>
-
-    <notes></notes>
-  </div>
-
-  <div>
-    more detail is better
-    
-    <div class="part-marker">part 2: execute: how: commit messages</div>
-
-    <notes></notes>
-  </div> -->
 </body>
 </html>
