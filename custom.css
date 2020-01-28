@@ -3,6 +3,10 @@
   display: none;
 }
 
+.jump-mode .part-marker {
+  display: none;
+}
+
 .talk-mode .part-marker,
 .talk-mode #slide_number_container {
   display: block;

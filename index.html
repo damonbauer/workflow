@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <title>Big</title>
+  <title>work</title>
   <link href="big.css" rel="stylesheet" type="text/css" />
   <link href="./themes/light.css" rel="stylesheet" type="text/css" />
   <link href="custom.css" rel="stylesheet" type="text/css" />
@@ -18,17 +18,17 @@
 
     <notes>
       INTRO:
-      Hi, I'm Damon Bauer. I'm a developer on the Gazelle Debit Card team. I've been at Ramsey Solutions for 5 1/2 years. I started working on daveramsey.com, then moved to EveryDollar where I worked on the browser app for about 3 years.
+      Hi, I'm Damon Bauer. I'm a developer on the Gazelle Debit Card team. I've been at Ramsey Solutions for 5 1/2 years. I started working on daveramsey.com, then moved to EveryDollar where I worked on the browser app, which is written in React.
 
       This is a talk about how I do work. Most of these ideas are not mine, but I've learned them over my time here.
 
       There's a good chance you've heard of, or even practice, a lot of what I'm going to talk about. My hope is that everyone can find at least _something_ to try and improve our code, processes and end products.
 
-      One thing you'll probably notice as I speak is that this talk has almost nothing to do with the actual code you write. This talk has much more to do with how you communicate, think about problems, and find solutions that serve your team, the business, and ultimately the users of your code.
+      One thing you'll probably notice as I speak is that this talk has almost nothing to do with the actual code you write. Rather, it has much more to do with how you communicate, think about problems, and find solutions that serve your team, the business, and ultimately the users of your code.
 
-      One thing I want to highlight... keep this in mind throughout this talk - a core value of the Front End Chapter is to: "ship value first & early, and talk to our customers"
+      A core value of the Front End Chapter is to: "ship value first & early, and talk to our customers". Keep that in mind as we go through this talk.
 
-      ******** FIND A GOOD EXAMPLE OF A FEATURE THAT WE BROKE DOWN ********
+      With that, let's get started.
     </notes>
   </div>
 
@@ -45,12 +45,12 @@
     <div class="part-marker">part 1: plan</div>
 
     <notes>
-      * Alongside designers and product managers, ask these questions:
-        * what can we agree on that is the smallest piece of work?
+      Alongside designers and product managers, we can ask these questions:
+        * what can we agree on that is the smallest piece of work that still accomplishes the feature?
         * what can we _not_ ship?
         * what can we get away with _not_ doing?
-      * Designers push the boundaries of our UI's. They challenge our assumptions, they question why something is technically not possible. This is a good thing! This is your chance to challege them! It's not a fight or a power struggle; it's an exercise in give and take and learning what's imperative to keep vs. what's a "nice to have".
-      * Once you've cut scope, ensure these 3 things are true with that smallest piece of work.
+      
+      Designers push the boundaries of our UI's. They challenge our assumptions, they question why something is technically not possible. This is a good thing! This is your chance to challege them! It's not a fight or a power struggle; it's an exercise in give and take and learning what's imperative to keep vs. what's a "nice to have".
     </notes>
   </div>
 
@@ -59,9 +59,11 @@
     <div class="part-marker">part 1: plan: ruthlessly cut scope</div>
 
     <notes>
-      The most important thing to ensure is that this new piece of work still provides user value.
+      Once you've cut scope, we need to ensure these 3 things are true with that smallest piece of work.
 
-      If the user can still perform the task they need, you're on the right track. Now it becomes a discussion with the rest of your team to ensure what will be delivered is an acceptable first iteration.
+      First, and the most important, is to ensure this new piece of work still provides user value. It's not serving the customer or the business if features we ship don't make it clear & easy for the user to do something.
+
+      If the user can still perform the task they need, we're on the right track. Now it becomes a discussion with the rest of the team to ensure what will be delivered is an acceptable first iteration.
     </notes>
   </div>
 
@@ -71,11 +73,13 @@
     <div class="part-marker">part 1: plan: ruthlessly cut scope</div>
 
     <notes>
-      Here are 2 screenshots from a "transfer funds" feature we built. The goal was to enable a user to transfer funds from a connected bank account into their Gazelle account. On the left was the mockup, on the right was what we delivered as a _3rd_ iteration.
+      Let's look at a real example from Gazelle. Here are 2 screenshots from a "transfer funds" feature we built. The goal was to enable a user to transfer funds from a connected bank account into their Gazelle account. On the left was the mockup, on the right was what we delivered as a _3rd_ iteration.
 
       Things we cut included: bank icons, custom select box, account balances & numbers, to/from toggle, scheduling the transfer, withdraw & deposit estimates.
 
-      This was around 4 months ago... and we're still using what's on the right. We'll eventually get to improving it, but we're solving more important problems right now.
+      This was around 4 months ago... and we're still using what's on the right.
+
+      We cared more about getting money into Gazelle so they could use their card (and we make money) than to delay that work adding all those extra things. It's our goal to make Gazelle worthy of someone's _primary_ bank account, which means they should be setting up direct deposit into Gazelle. Ultimately, that means this transfer funds feature will become less and less relvant. We're thinking long term and not putting work into something that we hope won't be used much.
     </notes>
   </div>
 
@@ -83,11 +87,11 @@
     don't box yourself in
     <div class="part-marker">part 1: plan: ruthlessly cut scope</div>
     <notes>
-      The small piece of work should help build a foundation to help you iterate quickly.
+      The second thing we need to ensure when cutting scope is to ensure we aren't boxing ourselves in. The small piece of work should help build a foundation to help you iterate quickly.
 
-      For example, our very first iteration of this feature was a page that had a single button of "Transfer $25". That's it. You could transfer $25 into Gazelle.
+      Our very first iteration of the transfer funds feature was a page that had a single button on it that said "Transfer $25". That's it. You could transfer $25 into Gazelle.
 
-      This didn't box us in because we were able to build all the code behind the scenes to accept an account to transfer from, an account to transfer to, and an amount. We were able to both ship _something_ and build the back end functionality we'd need no matter what the interface is.
+      This didn't box us in because we were able to build all the code behind the scenes to accept an account to transfer from, an account to transfer to, an amount, form validation and API calls. We were able to both ship _something_ and build the back end functionality we'd need no matter what the interface is.
 
       That leads me to the last point - ship quickly & learn.
     </notes>
@@ -97,11 +101,10 @@
     learn
     <div class="part-marker">part 1: plan: ruthlessly cut scope</div>
     <notes>
-      The point of this exercise is to ship as fast as you can, so you can begin learning how real people interact with your product in real environments.
+      The point of this exercise is to ship as fast as we can, so we can begin learning how real people interact with our products in real environments.
 
       This isn't limited to just "did a user like this feature" either.
-      For instance... the number of times I've been bitten by a CloudFront configuration not forwarding query parameters, or not accepting cookies... is embarrasing.
-      However, if we ship something out to production quickly, we are able to find those things that much faster. In this sort of problem, having shipped small pieces rules out a lot of "potential" problems, so it's easier to find that my cookies aren't being whitelisted.
+      For instance... the number of times I've been bitten by a CloudFront configuration not forwarding query parameters, or not accepting cookies... is embarrasing. If we ship something out to production quickly, we are able to find those things that much faster. But, when we ship small pieces, it rules out a lot of "potential" problems, making it easier to find that my cookies aren't being whitelisted.
     </notes>
   </div>
 
@@ -110,9 +113,9 @@
     <div class="part-marker">part 1: plan</div>
 
     <notes>
-      Now that we have an understanding about how we're trying to go about building things, let's talk about actually building it. Before we even write the code, though, we can flex our software "design" muscle. That's what we'll focus on for the next few minutes.
+      Now that we have an understanding about how we're trying to go about building things, let's talk about actually building it. Before we even write code, though, we can flex our software "design" muscle. That's what we'll focus on for the next few minutes.
       
-      Let me say this from the top: Pull Requests _should be_ the manifestation of all the planning your team has gone through & agreed to _before_ touching code.
+      Let me say this from the top: Pull Requests should be the manifestation of all the planning your team has gone through & agreed to _before_ touching code.
 
       Let's talk about why.
     </notes>
@@ -123,9 +126,9 @@
     <div class="part-marker">part 1: plan: before code</div>
 
     <notes>
-      When we pair or even group up, you're able to use the team as a sounding board to discuss ideas, tradeoffs and work through logic decisions.
+      When we gather around a whiteboard, pair or even group up, we're able to use the team as a sounding board to discuss ideas, tradeoffs and work through logic decisions.
 
-      We have a saying here, "If you want to go fast, work alone. If you want to go far, work together." This is never more true than applying it to this idea. When I plan how to solve a problems _together_, I inevitably end up with a better solution. We're able to bounce ideas off one another, think of different edge cases and talk through different patterns.
+      We have a saying here, "If you want to go fast, work alone. If you want to go far, work together." This is never more true than applying it to this idea. When we plan how to solve a problem _together_, we inevitably end up with a better solution. We're able to bounce ideas off one another, think of different edge cases and talk through different patterns. We can avoid a lot of bugs & rework simply by talking through what we think we need to build before we actually do it.
     </notes>
   </div>
 
@@ -136,7 +139,7 @@
     <notes>
       This idea piggybacks off the last. If we're working as a group to solve a problem, we all get context and learn a little more about how our systems work.
 
-      Think of just some of the reasons why you might be out of the office or even away from your desk. Sick time, vacation, DMV, meetings (this one included)... there are plenty of times where a teammate could pick up where you left off. This is why planning the work with your team is crucial. Everyone should have a decent understanding of what we're building and a pretty solidified idea on how.
+      Think of just some of the reasons why we might be out of the office or even away from your desk. Sick time, vacation, DMV, meetings... there are plenty of times where a teammate could pick up where we left off. This is why planning the work with our team is crucial. Everyone should have a decent understanding of what we're building and a pretty solidified idea on how.
     </notes>
   </div>
 
@@ -145,9 +148,11 @@
     <div class="part-marker">part 1: plan: before code</div>
 
     <notes>
-      If I make one big PR and I'm the only one with the context of how and why it works, and that PR has some concept baked in that is "wrong", it's very difficult to change, especially if it's all throughout the PR.
+      If I make a big PR and I'm the only one with the context of how and why it works, and that PR has some concept baked in that is "wrong", it's very difficult to change, especially if it's all throughout the PR.
 
-      However, in the scenarios I'm proposing, your team has agreed on how to build something and we should all have the context of what we're building. Also, you'll be making very small PRs. These 3 facts make it trivial for a teammate to call out a "wrong" concept early on in the process so it's easier for you to fix it before it is proliferated throughout the code.
+      What I'm proposing, however, is that our team has agreed on how to build something, we should all have the context of what we're building, and we'll be making very small PRs.
+
+      These 3 facts make it trivial for a teammate to call out a "wrong" concept early on in the process so it's easier for us to fix it before it is proliferated throughout the code.
     </notes>
   </div>
 
@@ -157,7 +162,7 @@
     <notes>
       OK, so we've got an idea of _how_ we want to work, and we know _why_ it's valuable. How do we _actually_ do this?
 
-      The big outcome of this "pre-work" are design artifacts.
+      The big outcome of this "pre-work" are design artifacts. Design artifacts are anything you or your team puts together that helps us visualize the work and organize our thoughts.
     </notes>
   </div>
 
