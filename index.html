@@ -8,7 +8,6 @@
   <link href="./themes/light.css" rel="stylesheet" type="text/css" />
   <link href="custom.css" rel="stylesheet" type="text/css" />
 
-  <script>BIG_ASPECT_RATIO=false;</script>
   <script src="big.js"></script>
   <script src="custom.js"></script>
 </head>
@@ -26,9 +25,9 @@
 
       One thing you'll probably notice as I speak is that this talk has almost nothing to do with the actual code you write. Rather, it has much more to do with how you communicate, think about problems, and find solutions that serve your team, the business, and ultimately the users of your code.
 
-      A core value of the Front End Chapter is to: "ship value first & early, and talk to our customers". Keep that in mind as we go through this talk.
+      A core value of the Front End Chapter is to: "ship value first & early, and talk to our customers". I think this means that we find ways to get something out to users, even if it's not complete or not perfectly polished, then we find ways to make it better.
 
-      With that, let's get started.
+      Keep that in mind as we go through this talk. With that, let's get started.
     </notes>
   </div>
 
@@ -50,7 +49,7 @@
         * what can we _not_ ship?
         * what can we get away with _not_ doing?
       
-      Designers push the boundaries of our UI's. They challenge our assumptions, they question why something is technically not possible. This is a good thing! This is your chance to challege them! It's not a fight or a power struggle; it's an exercise in give and take and learning what's imperative to keep vs. what's a "nice to have".
+      Designers push the boundaries of our UI's. They challenge our assumptions, they question why something is technically not possible. This is a good thing! This is our chance to challege them about what's imperative to keep vs. what's a "nice to have". It's not a fight or a power struggle; it's an exercise in give and take and building trust.
     </notes>
   </div>
 
@@ -103,8 +102,13 @@
     <notes>
       The point of this exercise is to ship as fast as we can, so we can begin learning how real people interact with our products in real environments.
 
+      You may have been here a few weeks ago when Ensor talked about "feedback loops". This is one example of a feedback loop in action. When we learn how our users interact with our software, we can tighten this feedback loop & make the software better. Then the process continues.
+
       This isn't limited to just "did a user like this feature" either.
-      For instance... the number of times I've been bitten by a CloudFront configuration not forwarding query parameters, or not accepting cookies... is embarrasing. If we ship something out to production quickly, we are able to find those things that much faster. But, when we ship small pieces, it rules out a lot of "potential" problems, making it easier to find that my cookies aren't being whitelisted.
+
+      For instance... honestly, it's embarrassing how many times I've been bitten by a CloudFront configuration not forwarding query parameters, or not accepting cookies.
+
+      If we ship something out to production quickly, we are able to find those things that much faster. It rules out a lot of "potential" problems, making it easier to find that my cookies aren't being whitelisted.
     </notes>
   </div>
 
@@ -293,6 +297,8 @@
 
     <notes>
       Again, we get feedback early & often from our users. This can be directly from them in the form of surveys, calls or user tests. Or it can be indirectly, in the form of analytics, engagement or business metrics.
+
+      Again, think feedback loops here!
     </notes>
   </div>
 
@@ -302,6 +308,8 @@
 
     <notes>
       Speaking of business metrics... one unexpected benefit of working like this - cutting scope, breaking down work into small chunks, planning ahead to avoid rework - that we found on the Gazelle team: our product manager is able to predict our work rate more accurately. She can then take information to stakeholders and our business can make an informed decision on what to build next.
+
+      This is a fantastic place for us to display our willingness and ability to "Partner" with our business with solid "Communication", 2 of the 4 "soft skills" on the IM+IN roadmap.
     </notes>
   </div>
 
@@ -494,6 +502,8 @@
       - constantly ship code using small PRs,
 
       we are able to ship code to our customers faster, get feedback earlier, and deliver hope to people who need it most.
+
+      Hopefully, you learned something new during this talk... what's one or two things you might want to try or implement? What piqued your interest? I'd be happy to chat with you if you want more info, bounce ideas or ask questions!
 
       Thanks!
     </notes>
